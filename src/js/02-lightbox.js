@@ -26,6 +26,9 @@ function onclickPhotoInGallery(event) {
         }
     });
 };
-new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery .gallery__item', {
+    captions: true,
     captionDelay: 250,
+    captionSelector: `${divParentGallery} .gallery__item .gallery__image`,
+    captionType: 'img',
 });
